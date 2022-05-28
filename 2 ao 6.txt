@@ -1,0 +1,29 @@
+2 - Saída 1 = A  
+    Saída 2 = B  
+    Saída 3 = D  
+    Saída 4 = C  
+  
+3 - Se os valores forem iguais, nenhum IF será atendido e o valor mostrado será "D".  
+  
+4 - Saída 1 = A F G  
+    Saída 2 = A E G  
+    Saída 3 = B F G  
+    Saída 4 = D F G  
+    Saída 5 = D F G  
+    Saída 6 = C F G  
+    Saída 7 = D F G  
+  
+5 - a) a = 12, b = 14, c = 25;  
+       x = 1.0, y = 500.0, z = 50.0;  
+    b) a = 12, b = 14, c = 25;  
+       x = 1.0, y = 5.0, z = 5.0;  
+    c) a = 14, b = 14, c = 25;
+       x = 100.0, y = 100.0, z = 100.0;
+    d) a = 21, b = 22, c = 43;
+       x = 40.1, y = 30.0, z = 100.5;
+    e) a = 10, b = 30, c = 11;
+       x = 100.0, y = 5.0, z = 10.0;
+
+6 - a) Programa 1 = 50.00; Programa 2 = 50.00;
+    b) Programa 1 = 112.95; Programa 2 = 112.95;
+    c) Programa 1 = -280.4; Programa 2 = 504.72;

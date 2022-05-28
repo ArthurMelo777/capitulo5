@@ -1,0 +1,105 @@
+7 - a, b = int(input()), int(input())
+    if a > b: print(a)
+    else: print(b)
+
+8 - a, b, c = int(input()), int(input()), int(input())
+    if a < b and a < c: print(a)
+    elif (b<c): print(b)
+    else: print(c)
+
+9 - n = int(input())
+    if n%2==0: print("Par")
+    else: print("Impar")
+
+10 - vetor = [int(input()), int(input()), int(input()), int(input()), int(input())]
+     vetor.sort()
+     print(vetor[4])
+
+11 - vetor = [int(input()), int(input()), int(input())]
+     vetor.sort()
+
+     if (vetor[0]+vetor[1] > vetor[2]): print("maior")
+     else: print("nao maior")
+
+12 - def maior(a, b, c):
+         vetor = [a, b, c]
+         vetor.sort()
+
+         if (vetor[0]+vetor[1] > vetor[2]): return True
+         else: return False
+
+     a, b, c = int(input()), int(input()), int(input())
+
+     if maior(a, b, c) and (a==b and a==c): print("equilatero")
+     elif maior(a, b, c) and (a==b or a==c or b==c): print("isosceles")
+     elif maior(a, b, c) and (a!=b and a!=c and b!=c): print("escaleno")
+     else: print("Nenhum")
+
+13 - d, m, a = map(int, input().split())
+
+     val = False
+
+     if (m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12) and (d<=31): val= True
+     if (m == 4 or m == 6 or m == 9 or m == 11) and (d<=30): val = True
+     if (m == 2) and (d<=28): val = True
+
+     if val: print("valida")
+     else: print("invalida")
+
+14 - def validar(d, m, a):
+         val = False
+
+         if (m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12) and (d<=31): val= True
+         if (m == 4 or m == 6 or m == 9 or m == 11) and (d<=30): val = True
+         if (m == 2) and (d<=28): val = True
+
+         return val
+
+     d, m, a = map(int, input().split())
+
+     if validar(d, m ,a):
+         if (m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12):
+             if (d+1<=31): print("{:02d}/{:02d}/{}".format(d+1, m, a))
+             elif (m+1<=12): print("01/{:02d}/{}".format(m+1, a))
+             else: print("01/01/{}".format(a+1))
+         elif (m == 4 or m == 6 or m == 9 or m == 11):
+             if (d+1<=30): print("{:02d}/{:02d}/{}".format(d+1, m, a))
+            else: print("01/{:02d}/{}".format(m+1, a))
+         elif (m == 2):
+             if (d+1<=28): print("{:02d}/{:02d}/{}".format(d+1, m, a))
+             else: print("01/{:02d}/{}".format(m+1, a))
+     else: print("data invalida")
+
+15 - a, b = map(int, input().split())
+     nOp = 0
+
+     if a > b:
+         if (a-b%2==0):
+             a = a-(a-b)
+             nOp += 1
+         else:
+             a = a+(a-b)
+             nOp += 1
+     elif a < b:
+         if (a-b%2==0):
+             a = a-(b-a)
+             nOp += 1
+         else:
+             a = a+(b-a)
+             nOp += 1
+
+     print(nOp)
+
+16 - n, m, a, b = map(int, input().split())
+     bl, t1, t2 = 0, 0, 0
+
+     if (n%m != 0):
+         if n>m:
+             t1,t2 = ((n%m)*m-n) * a, (n-m) * b
+         else:
+             t1,t2 = (m-n) * a, ((m%n)*n) * b
+
+     if t1 > t2: bl = t2
+     else: bl = t1
+
+     print(bl)
