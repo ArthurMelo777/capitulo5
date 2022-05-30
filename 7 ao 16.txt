@@ -74,19 +74,11 @@
      nOp = 0
 
      if a > b:
-         if (a-b%2==0):
-             a = a-(a-b)
-             nOp += 1
-         else:
-             a = a+(a-b)
-             nOp += 1
+         if (a-b%2==0): nOp += 1
+         else: nOp += 2
      elif a < b:
-         if (a-b%2==0):
-             a = a-(b-a)
-             nOp += 1
-         else:
-             a = a+(b-a)
-             nOp += 1
+         if (b-a%2==0): nOp += 2
+         else: nOp += 1
 
      print(nOp)
 
